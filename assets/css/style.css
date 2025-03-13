@@ -382,6 +382,35 @@ footer {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.return-to-game {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#return-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#return-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustment */
+@media (max-width: 768px) {
+    #return-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
 /* Bear Helper Animation */
 #bear-helper {
     position: fixed;
@@ -416,6 +445,51 @@ footer {
         bottom: 10px;
         font-size: 0.9rem;
     }
+}
+
+/* Leaderboard Section */
+#top-players {
+    padding: 2rem;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    border-bottom: 2px solid #4e54c8;
+}
+
+th {
+    background: #4e54c8;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Return to Game Button */
+.return-btn {
+    margin-top: 2rem;
+}
+
+.return-btn a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #ffcc70;
+    color: #4e54c8;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.return-btn a:hover {
+    transform: scale(1.1);
 }
 
 
