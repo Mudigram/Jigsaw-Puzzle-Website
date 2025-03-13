@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Players - Bear Puzzle</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="player-profiles.html">Player Profiles</a>
+        <a href="top-players.html">Top Players</a>
+    </nav>
+
+    <section id="top-players">
+        <h1>🏆 Top Players 🏆</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player Name</th>
+                    <th>Best Time</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard">
+                <tr>
+                    <td>1 <span class="trophy gold">🥇</span></td>
+                    <td>BearMaster</td>
+                    <td>02:45</td>
+                </tr>
+                <tr>
+                    <td>2 <span class="trophy silver">🥈</span></td>
+                    <td>HoneyHunter</td>
+                    <td>03:10</td>
+                </tr>
+                <tr>
+                    <td>3 <span class="trophy bronze">🥉</span></td>
+                    <td>ClawChampion</td>
+                    <td>03:25</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Share Button -->
+        <button class="share-button" id="share-button">Share Your Score 🐻</button>
+    </section>
+
+    <div id="bear-mascot"></div>
+
+    <script>
+        // Share button functionality
+        document.getElementById('share-button').addEventListener('click', () => {
+            const text = "I'm on the Top Players board for the Bear Puzzle Game! 🐻🏆 Can you beat my time? #BearPuzzle";
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        });
+
+        const extraPlayers = [
+            { name: "PuzzleKing", time: "03:40" },
+            { name: "BearKnight", time: "04:00" },
+            { name: "PawHero", time: "04:25" }
+        ];
+
+        const leaderboard = document.getElementById("leaderboard");
+
+        // Dynamically add more players
+        extraPlayers.forEach((player, index) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 4}</td>
+                <td>${player.name}</td>
+                <td>${player.time}</td>
+            `;
+            leaderboard.appendChild(row);
+        });
+    </script>
+
+</body>
+
+</html>

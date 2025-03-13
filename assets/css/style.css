@@ -1,0 +1,422 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+}
+
+/* Navigation Bar */
+nav {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 0;
+    flex-wrap: wrap; 
+    text-align: center;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc70;
+}
+
+/* Game Section */
+#game {
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#unity-container {
+    width: 90%;
+    max-width: 800px;
+    height: 400px;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.1);
+    border: 3px solid #4e54c8;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+th {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Player Form */
+#player-form {
+    margin: 1.5rem 0;
+}
+
+#player-form input {
+    padding: 0.8rem;
+    border: 2px solid #4e54c8;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 300px;
+}
+
+#player-form button {
+    padding: 0.8rem 1.5rem;
+    background: #ffcc70;
+    color: #4e54c8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#player-form button:hover {
+    transform: scale(1.1);
+}
+
+/* Score Display */
+#score-container h3 {
+    font-size: 2rem;
+    color: #4e54c8;
+    margin-top: 1rem;
+}
+
+/* Floating Bear Mascot */
+#bear-mascot {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background: url('../images/bear.png') no-repeat center/contain;
+    z-index: 10;
+    animation: float 3s ease-in-out infinite;
+    pointer-events: none; /* Allows clicking through the bear */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #4e54c8;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #unity-container {
+        height: 300px;
+    }
+
+    #player-form input {
+        width: 80%;
+    }
+
+    #score-container h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+.trophy {
+    display: inline-block;
+    margin-left: 10px;
+    animation: shine 1.5s ease-in-out infinite;
+}
+
+.gold { color: gold; }
+.silver { color: silver; }
+.bronze { color: #cd7f32; }
+
+@keyframes shine {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Share Button */
+.share-button {
+    margin-top: 20px;
+    padding: 0.8rem 1.5rem;
+    background: #1DA1F2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.share-button:hover {
+    background: #0d8de5;
+    padding: 0.8rem 1.2rem;
+}
+
+/* About Page - Section Styling */
+#about {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading Styles */
+#about h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+/* Paragraph & List Styles */
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about li {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+/* Interactive Bear Mascot */
+#bear-mascot {
+    position: fixed; /* Stays fixed across all pages */
+    top: 20px; /* Moves to the top */
+    left: 20px; /* Moves to the left */
+    width: 80px;
+    height: 80px;
+    background: url('../images/bear.png') no-repeat center/contain;
+    z-index: 10; /* Ensures it stays on top */
+    animation: bounce 3s ease-in-out infinite; /* Keeps bouncing */
+    pointer-events: none;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Back to Home Button */
+.button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background: #ffcc70;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    background: #ffac40;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center;
+    }
+
+    table {
+        display: block; /* Allow horizontal scroll for tables */
+        overflow-x: auto;
+    }
+
+    #bear-mascot {
+        top: auto;          /* Remove from top */
+        bottom: 10px;       /* Place at the bottom */
+        left: 10px;       /* Move to the left */
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Player Card Container */
+.player-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+/* Individual Player Card */
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.player-card img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .player-card {
+        max-width: 150px; 
+        padding: 0.8rem;
+    }
+
+    .player-card h2 {
+        font-size: 1rem; 
+    }
+
+    .player-card p {
+        font-size: 0.9rem; 
+    }
+}
+
+/* How to Play Section */
+#how-to-play {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#how-to-play h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Instruction Cards */
+.instruction-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instruction-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Bear Helper Animation */
+#bear-helper {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #ffcc70;
+    color: #4e54c8;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    cursor: pointer;
+    animation: floatBear 3s ease-in-out infinite;
+}
+
+@keyframes floatBear {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    #how-to-play h1 {
+        font-size: 2rem;
+    }
+
+    .instruction-card {
+        padding: 1.5rem;
+    }
+
+    #bear-helper {
+        left: 10px;
+        bottom: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+

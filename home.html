@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Jigsaw Puzzle Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
+
+    <!-- Floating Bear Mascot -->
+    <div id="bear-mascot" aria-hidden="true"></div>
 
     <!-- Navigation -->
     <nav>
@@ -16,22 +22,33 @@
 
     <!-- Game Section -->
     <section id="game">
-        <h1>Jigsaw Puzzle Game</h1>
+        <h1>🧩 Jigsaw Puzzle Game</h1>
 
-        <!-- Unity Game Placeholder -->
+        <!-- Unity Game Container -->
         <div id="unity-container">
-            <p>Unity WebGL Game will go here.</p>
+            <p>🕹️ Unity WebGL Game will go here.</p>
         </div>
 
         <!-- Player Profile Input -->
         <form id="player-form">
             <label for="player-name">Enter your name:</label>
-            <input type="text" id="player-name" required>
-            <button type="submit">Start Game</button>
+            <input type="text" id="player-name" placeholder="BearMaster123" required>
+            <button type="submit" id="start-game">Start Game</button>
         </form>
 
+        <!-- Score Display -->
+        <div id="score-container">
+            <h3>Score: <span id="player-score">0</span></h3>
+        </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bear Puzzle Game. All Rights Reserved.</p>
+    </footer>
+
     <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>

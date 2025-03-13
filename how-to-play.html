@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - Bear Puzzle</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+    
+
+        <a href="how-to-play.html">Play</a>
+    </nav>
+         <!-- Return to Game Button -->
+    <div class="return-to-game">
+        <a href="game.html" id="return-button">🎮 Return to Game</a>
+    </div>
+
+    <!-- How to Play Section -->
+    <section id="how-to-play">
+        <h1>How to Play Bear Puzzle</h1>
+        
+        <div class="instruction-card">
+            <h2>1. Start the Game</h2>
+            <p>Click the "Start" button to begin the puzzle. Time begins as soon as you make your first move.</p>
+        </div>
+
+        <div class="instruction-card">
+            <h2>2. Solve the Puzzle</h2>
+            <p>Arrange the pieces to form the bear picture. The faster you complete it, the better your score!</p>
+        </div>
+
+        <div class="instruction-card">
+            <h2>3. Submit Your Time</h2>
+            <p>When finished, enter your name to save your best time on the leaderboard.</p>
+        </div>
+
+        <div class="instruction-card">
+            <h2>4. Share Your Score</h2>
+            <p>Click the "Share" button to post your best time on Twitter and challenge your friends.</p>
+        </div>
+    </section>
+
+   
+    <!-- Bear Mascot Guide -->
+    <div id="bear-helper" class="hover-bear">
+        🐻 Need Help? Hover Over the Steps!
+    </div>
+
+    <script>
+        document.getElementById('return-button').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'game.html';
+        });
+    </script>
+    
+
+</body>
+
+</html>
